@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <style>
+     ul {list-style:none;}
+     .highlight {background-color: lavender;}
+  </style>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  <script>
+  $(document).ready(function(){
+    $("#search_names").keyup(function(){
+      search_names = $(this).val();
+      $('#names li').removeClass('highlight');
+      if(jQuery.trim(search_names) !== ''){
+      $("#names li:contains('" + search_names + "')").addClass('highlight');
+      }
+    });
+  });
+  </script>
+
+</head>
+
+<body>
+
+  <p><input id="search_names" type="text"></p>
+  <ul id="names">
+      <li>Rosalyn Eishen</li>
+      <li>Juan Sifuentes</li>
+      <li>Gwen Eishen</li>
+      <li>Elena Sifuentes</li> 
+      <li>Helena Ray</li>
+      <li>Jose Fuentes</li>
+  </ul>
+
+</body>
+</html>
