@@ -12,10 +12,10 @@
   <script>
   $(document).ready(function(){
     $("#search_names").keyup(function(){
-      search_names = $(this).val();
+      var search_names = $(this).val();
       $('#names li').removeClass('highlight');
       if(jQuery.trim(search_names) !== ''){
-      $("#names li:contains('" + search_names + "')").addClass('highlight');
+        $("#names li:contains('" + search_names + "')").addClass('highlight');
       }
     });
   });
